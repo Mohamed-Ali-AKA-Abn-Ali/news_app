@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
+import 'package:news_app/services/newService.dart';
 import 'home.dart';
 
 void main() {
   runApp(const MyApp());
-}
-final dio = Dio();
-
-void getHttp() async {
-  final response = await dio.get('https://newsapi.org/v2/everything?q=Apple&from=2024-02-21&sortBy=popularity&apiKey=API_KEY');
-  print(response);
 }
 
 class MyApp extends StatelessWidget {
